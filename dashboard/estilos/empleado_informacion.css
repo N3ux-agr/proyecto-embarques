@@ -1,0 +1,344 @@
+/* Estilos para la tabla */
+table {
+    width: 100%; /* Ancho de la tabla */
+    border-collapse: collapse; /* Colapsar bordes de celda */
+    margin: 20px auto; /* Margen superior e inferior de 20px, centrado horizontalmente */
+}
+
+/* Estilos para las celdas de la tabla */
+td, th {
+    border: 1px solid #ddd; /* Borde de 1px sólido con color gris claro */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+/* Estilos para la cabecera de la tabla */
+th {
+    background-color: #f2f2f2; /* Color de fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+
+/* Estilos para el cuerpo de la tabla */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo alternado gris claro */
+}
+
+/* Estilos para el contenedor */
+.container {
+    width: 100%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centrado horizontalmente */
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 10px; /* Margen */
+    cursor: pointer; /* Cursor tipo puntero al pasar el ratón */
+}
+
+.btn-entrada {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+}
+
+.btn-salida {
+    background-color: #f44336; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Z-index para asegurarse de que el modal esté encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permitir desplazamiento si el contenido del modal es demasiado grande */
+    background-color: rgb(0,0,0); /* Fondo negro con opacidad */
+    background-color: rgba(0,0,0,0.4); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Color de fondo blanco */
+    margin: 15% auto; /* Margen superior e inferior del 15% y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del contenido del modal */
+}
+
+.close {
+    color: #aaa; /* Color del icono de cierre */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Cambiar el color del icono de cierre al pasar el ratón */
+    text-decoration: none; /* Quitar subrayado */
+    cursor: pointer; /* Cambiar a cursor de puntero */
+}
+
+/* ///////////////*/
+/* Estilos para el combo box */
+select {
+padding: 12px 20px; /* Espaciado interno */
+font-size: 18px; /* Tamaño de fuente */
+border: 2px solid #3498db; /* Borde de 2px sólido con color azul */
+border-radius: 6px; /* Borde redondeado */
+background-color: #f8f9fa; /* Color de fondo */
+color: #333; /* Color del texto */
+appearance: none; /* Eliminar estilos nativos del sistema */
+-webkit-appearance: none; /* Para navegadores basados en WebKit */
+-moz-appearance: none; /* Para navegadores basados en Gecko */
+cursor: pointer; /* Cursor tipo puntero al pasar el ratón */
+width: 100%; /* Ancho del combo box */
+max-width: 300px; /* Ancho máximo */
+transition: border-color 0.3s ease; /* Transición suave para el cambio de color de borde */
+background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"><path d="M7 10l5 5 5-5H7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Icono de flecha */
+background-repeat: no-repeat; /* No repetir la imagen de fondo */
+background-position: right 10px center; /* Posición del icono de flecha */
+}
+
+/* Estilos para cuando el combo box está enfocado */
+select:focus {
+border-color: #ff6b6b; /* Borde de color rojo cuando está enfocado */
+outline: 0; /* Quitar el contorno cuando está enfocado */
+box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); /* Sombra suave cuando está enfocado */
+}
+
+/* Estilos para el menú desplegable */
+select option {
+padding: 10px; /* Espaciado interno */
+font-size: 16px; /* Tamaño de fuente */
+border-bottom: 1px solid #ccc; /* Borde inferior de 1px sólido con color gris claro */
+background-color: #f8f9fa; /* Color de fondo */
+color: #333; /* Color del texto */
+transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+/* Estilos para cuando se pasa el ratón sobre las opciones del menú desplegable */
+select option:hover {
+background-color: #e9ecef; /* Color de fondo gris claro cuando se pasa el ratón */
+color: #333; /* Color del texto */
+}
+
+/* Estilos para la opción seleccionada en el menú desplegable */
+select option:checked {
+background-color: #FF4633; /* Color de fondo azul para la opción seleccionada */
+color: #fff; /* Color del texto */
+}
+/* Estilos para el campo para insertar cantidad */
+.input-cantidad {
+padding: 8px; /* Espaciado interno */
+font-size: 16px; /* Tamaño de fuente */
+border: 2px solid #3498db; /* Borde de 2px sólido con color azul */
+border-radius: 6px; /* Borde redondeado */
+background-color: #f8f9fa; /* Color de fondo */
+color: #333; /* Color del texto */
+transition: border-color 0.3s ease; /* Transición suave para el cambio de color de borde */
+width: 100px; /* Ancho del campo de entrada */
+}
+
+.input-cantidad:focus {
+border-color: #ff6b6b; /* Borde de color rojo cuando está enfocado */
+outline: 0; /* Quitar el contorno cuando está enfocado */
+box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); /* Sombra suave cuando está enfocado */
+}
+
+/* Estilos para el botón "Guardar Tarea" */
+.btn-guardar {
+    background-color: #3368FF; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Borde redondeado */
+    cursor: pointer; /* Cursor tipo puntero al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    margin-top: 20px; /* Margen superior */
+    display: inline-block; /* Mostrar como elemento de bloque con espacio adicional horizontal */
+}
+
+.btn-guardar:hover {
+    background-color: #680792; /* Color de fondo rojo más oscuro al pasar el ratón */
+}
+
+/* Estilos para el combo box */
+select {
+    padding: 8px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 1px solid #ccc; /* Borde de 1px sólido con color gris claro */
+    border-radius: 4px; /* Borde redondeado */
+    background-color: #fff; /* Color de fondo blanco */
+    appearance: none; /* Eliminar estilos nativos del sistema */
+    -webkit-appearance: none; /* Para navegadores basados en WebKit */
+    -moz-appearance: none; /* Para navegadores basados en Gecko */
+    cursor: pointer; /* Cursor tipo puntero al pasar el ratón */
+}
+
+/* Estilos para cuando el combo box está enfocado */
+select:focus {
+    border-color: #66afe9; /* Borde de color azul claro cuando está enfocado */
+    outline: 0; /* Quitar el contorno cuando está enfocado */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn-entrada {
+    background-color: #008CBA; /* Azul */
+}
+
+.btn-salida {
+    background-color: #f44336; /* Rojo */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}   
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E3F2FD;
+    margin: 0;
+    padding: 0;
+    color: #212121;
+}
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h1, h2 {
+    color: #0D47A1;
+    border-bottom: 2px solid #BBDEFB;
+    padding-bottom: 10px;
+}
+.section:not(:last-child) {
+    margin-bottom: 40px;
+}
+.info div, .info img {
+    margin-bottom: 20px;
+}
+.info div p, .info img {
+    background-color: #E3F2FD;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+img.avatar {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 150px; /* ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info > div {
+    flex-basis: calc(50% - 10px);
+}
+@media (max-width: 768px) {
+    .info > div {
+        flex-basis: 100%;
+    }
+}
+.info img {
+    flex-basis: 100%;
+}
+.info p {
+    margin: 0;
+    font-size: 16px;
+}
+ 
+    
