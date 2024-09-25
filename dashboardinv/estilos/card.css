@@ -1,0 +1,146 @@
+/* Estilo general del cuerpo del documento */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #dde7ec;
+}
+
+/* Contenedor principal de tarjetas */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+/* Estilo de las tarjetas */
+.card {
+  background: rgba(103, 147, 160, 0.37);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilo de la imagen de avatar en las tarjetas */
+.avatar {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Estilo de la información dentro de las tarjetas */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Añadido para asegurar que el contenido no se desborde */
+}
+/* Estilo para el título y el párrafo en tarjetas expandidas con texto completo */
+.card.expanded .card-info h4,
+.card.expanded .card-info p {
+  max-width: 100%;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+
+/* Estilo para el título y el párrafo dentro de las tarjetas con truncamiento de texto */
+.card-info h4, .card-info p {
+  margin: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px; /* Ajustar según el ancho disponible en la tarjeta */
+}
+
+/* Estilo para las tarjetas expandidas */
+.card.expanded {
+  width: 600px;
+  z-index: 1000;
+}
+
+/* Estilo para la imagen de avatar en tarjetas expandidas */
+.card.expanded .avatar {
+  width: 200px;
+  height: 200px;
+}
+
+/* Estilo para el título y el párrafo en tarjetas expandidas con texto completo */
+.card.expanded .card-info h4,
+.card.expanded .card-info p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Estilo general de los botones */
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/* Estilo para el botón de edición */
+.edit-btn {
+  background-color: #4CAF50;
+  color: rgb(0, 0, 0);
+}
+
+/* Estilo para el botón de eliminación */
+.delete-btn {
+  background-color: #f44336;
+  color: rgb(255, 255, 255);
+}
+
+/* Estilo adicional para información adicional en las tarjetas */
+.additional-info {
+  margin-top: 10px;
+}
+
+
+/* Estilo para el contenedor de iconos dentro de la tarjeta */
+.iconos-container {
+  position: absolute;
+  top: 10px; /* Ajusta según sea necesario */
+  right: 10px; /* Ajusta según sea necesario */
+  display: flex;
+  flex-direction: column; /* Alinea los iconos verticalmente */
+  align-items: flex-end; /* Alinea los iconos a la derecha */
+  overflow: hidden; /* Evita que los iconos se salgan del contenedor */
+}
+
+/* Estilo para los iconos dentro de la tarjeta */
+.icono {
+  width: 48px; /* Tamaño más pequeño para los iconos */
+  height: 48px; /* Tamaño más pequeño para los iconos */
+  margin-bottom: 5px; /* Espacio entre iconos */
+  cursor: pointer;
+  transition: transform 0.3s; /* Animación opcional para interacción */
+}
+.icono:hover {
+  transform: scale(1.1); /* Efecto al pasar el ratón por encima */
+}
+
+/* Asegúrate de que los iconos solo se muestren en las tarjetas expandidas */
+.card .iconos-container {
+  display: none;
+}
+
+.card.expanded .iconos-container {
+  display: flex; /* Asegura que los iconos se muestren al expandir */
+}

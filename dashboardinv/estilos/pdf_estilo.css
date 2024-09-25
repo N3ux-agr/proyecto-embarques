@@ -1,0 +1,38 @@
+/* estilo.css */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+}
+h1 {
+    font-size: 14pt;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+.header-table {
+    margin-bottom: 20px;
+}
+.header-table td {
+    border: none;
+}
+.assignment-table {
+    margin-bottom: 20px;
+}
+.section-title {
+    font-size: 12pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.signature-section {
+    padding-top: 20px;
+}
+.signature {
+    font-size: 10pt;
+    text-align: center;
+}
